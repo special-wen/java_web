@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <script src="./jquery/jquery.js"></script>
+    <script src="./javascript/login.js"></script>
+</head>
+<body>
+
+<p class="tip" style="color: #ef4238">欢迎来到那一年影城</p>
+<div id="login"></div>
+<div class="cont">
+    <div class="form sign-in">
+        <form method="post" action="./index.html" onsubmit="return confirm()">
+        <label>
+            <span>账号</span>
+            <input type="text" class = "name" id="name"/>
+        </label>
+        <label>
+            <span>密码</span>
+            <input type="password" class = "password" id="password" />
+        </label>
+        <p class="forgot-pass">忘记密码？</p>
+            <button type="button" class="submit"><input type="submit" /></button>
+        <button type="button" class="fb-btn">Connect with <span>facebook</span></button>
+        </form>
+    </div>
+    <div class="sub-cont">
+        <div class="img">
+            <div class="img__text m--up">
+                <h2>One of us?</h2>
+                <p>if you already has an account,just sign in.We've missed you!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
