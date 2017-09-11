@@ -10,7 +10,8 @@
     <script src="./javascript/studio.js"></script>
 </head>
 <body>
-<div class="header">
+<!--导航-->
+<div id="header">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <ul class="nav nav-tabs">
@@ -26,5 +27,65 @@
     </nav>
 </div>
 
+
+<!--所有的演出厅-->
+<table class="table">
+    <caption>那一年影院演出厅</caption>
+    <thead>
+    <tr>
+        <th>演出厅名称</th>
+        <th>座位行</th>
+        <th>座位列</th>
+        <th>演出厅状态</th>
+        <th>演出厅简介</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="active">
+        <td>1号演出厅</td>
+        <td>10</td>
+        <td>8</td>
+        <td>可用</td>
+        <td>巨幕演出厅</td>
+    </tr>
+    <tr class="warning">
+        <td>2号演出厅</td>
+        <td>8</td>
+        <td>6</td>
+        <td>维修中</td>
+        <td>3D环绕演出厅</td>
+    </tr>
+    <tr  class="warning">
+        <td>3号演出厅</td>
+        <td>10</td>
+        <td>10</td>
+        <td>维修中</td>
+        <td>巨幕3D演出厅</td>
+    </tr>
+    <tr  class="active">
+        <td>4号演出厅</td>
+        <td>4</td>
+        <td>8</td>
+        <td>可用</td>
+        <td>小型演出厅</td>
+    </tr>
+    </tbody>
+</table>
+
+<!--演出厅的增删改查-->
+<div>
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="查找演出厅">
+        </div>
+        <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i>查找</button>
+    </form>
+    <button type="button" class="btn btn-default navbar-btn"><i class="fa fa-plus" aria-hidden="true"></i> 添加演出厅</button>
+    <button type="button" class="btn btn-default navbar-btn"><i class="fa fa-minus" aria-hidden="true"></i> 删除演出厅</button>
+    <button type="button" class="btn btn-default navbar-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改演出厅</button>
+</div>
+
+</body>
+</html>
 </body>
 </html>
