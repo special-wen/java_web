@@ -25,7 +25,3 @@ window.onload = function createSate() {
         document.getElementById('seat').appendChild(br);
     }
 }
-
-//function changeSate() {
-
-//}

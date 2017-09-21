@@ -36,7 +36,7 @@
 
 <!--所有的演出厅-->
 <div id="table">
-    <table class="table table-striped" id = 'studio' onclick="studioRow(this)">
+    <table class="table table-striped " id = 'studio' onclick="studioRow(this)" >
     <caption>那一年影院演出厅</caption>
     <tr class="warning">
         <td>演出厅名称</td>
@@ -86,8 +86,8 @@
         </div>
         <button type="submit" class="btn btn-default" ><i class="fa fa-search" aria-hidden="true"></i>查找</button>
         <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i> 添加演出厅</button>
-        <button type="button" class="btn btn-default navbar-btn" id = 'deleteStudio'><i class="fa fa-minus" aria-hidden="true"></i> 删除演出厅</button>
-        <button type="button" class="btn btn-default navbar-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改演出厅</button>
+        <button type="button" class="btn btn-default navbar-btn" id = 'deleteStudio' onclick="removeStudio()"><i class="fa fa-minus" aria-hidden="true"></i> 删除演出厅</button>
+        <button type="button" class="btn btn-default navbar-btn" id="changeStudio" onclick="change()" data-toggle="modal" data-target="#myModals" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改演出厅</button>
     </form>
 </div>
 
@@ -121,5 +121,40 @@
     </div>
 </div>
 
+<!--修改演出厅-->
+<!--<div id="change" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+</div>-->
+
+
+
+
+<!--修改演出厅信息-->
+<div class="modal fade" id = "myModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="ModalLabel" style="text-align: center">
+                    修改演出厅信息
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" id = "change">
+                    演出厅名称: <input type="text" name = "studioName"  class="form-control" id = "changeName" required/><br>
+                    座位行数: <input type="text" name = "sateRow"  class="form-control" id = "changeRow" required/><br>
+                    座位列数: <input type="text" name = "sateCol"  class="form-control" id = "changeCol" required/><br>
+                    演出厅状态: <input type="text" name="studioState"   class="form-control" id = 'changeState' required/><br>
+                    演出厅简介: <input type="text" name="studioIntroduction"  class="form-control" id = 'changeInt'/>
+                </form>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button class="btn btn-primary " data-dismiss="modal">提交更改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
