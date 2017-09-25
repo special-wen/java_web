@@ -1,14 +1,5 @@
 'use strict'
 
-/*
-window.onload = function createSate() {
-   let image = document.createElement('img');
-   image.src = '../System_manager/image/1.png';
-   document.getElementById('seat').appendChild(image);
-}
-
-*/
-
 window.onload = function createSate() {
     for(let i = 1;i<=8;i++){
         for(let j = 1;j<=8;j++){
@@ -17,6 +8,12 @@ window.onload = function createSate() {
             sateImage.src = '../System_manager/image/1.png';
             num.innerText = i+','+j;
             sateImage.setAttribute("class","sate");
+            sateImage.setAttribute('data-toggle','modal');
+            sateImage.setAttribute('data-target','#myModal');
+            /*sateImage.addEventListener('click',function () {
+                alert(i+','+j);
+            })*/
+            //sateImage.setAttribute('onclick','sate(this)');
             document.getElementById('seat').appendChild(sateImage);
             document.getElementById('seat').appendChild(num);
         }
@@ -24,4 +21,8 @@ window.onload = function createSate() {
 
         document.getElementById('seat').appendChild(br);
     }
+}
+
+function changeState() {
+    
 }

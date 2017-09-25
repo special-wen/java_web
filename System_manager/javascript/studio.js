@@ -31,8 +31,6 @@ function addStudio() {
 function studioRow(obj) {
     let table = document.getElementById('studio');
     let length = table.rows.length;
-    //let curRow = event.srcElement.parentElement;
-    //curRow.rowIndex = 0;
 
     for(let i = 0;i<length;i++){
         if(i == 0){

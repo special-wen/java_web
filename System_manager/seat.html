@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>座位管理</title>
-    <link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">
+    <!--<link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap.css">-->
     <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/seat.css">
-    <script src="./jquery/jquery.js"></script>
+    <!--<script src="./jquery/jquery.js"></script>-->
     <script src="./javascript/seat.js"></script>
-    <script src="./javascript/seatState.js"></script>
+    <!--<script src="./javascript/seatState.js"></script>-->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 
 <div id="header">
     <nav class="navbar navbar-default" role="navigation">
@@ -28,6 +32,7 @@
     </nav>
 </div>
 
+<!--座位管理-->
 <div class="row container">
     <!--需要操作的演出厅-->
     <div class="col-md-3">
@@ -39,13 +44,55 @@
         </ul>
     </div>
 
-   <!-- 对座位的管理操作-->
+    <!--对座位的管理操作-->
     <div class="col-md-9">
         <div id = "seat"></div>
     </div>
 </div>
 
-<!--<img src="../System_manager/image/1.png" alt="">-->
+
+<!--更改座位状态-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    更改座位状态
+                </h4>
+            </div>
+            <div class="modal-body">
+                请选择座位状态：
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 座位正常
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">座位坏掉
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">改为过道
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="changeState()">
+                    提交更改
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
