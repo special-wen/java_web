@@ -105,10 +105,10 @@
             </div>
             <div class="modal-body">
                 <form role="form">
-                演出厅名称: <input type="text" name = "studioName" id="studioName" class="form-control" placeholder="请输入演出厅名称" required/><br>
-                座位行数: <input type="text" name = "sateRow" id="sateRow" class="form-control" placeholder="请输入演出厅中座位的行数" required/><br>
-                座位列数: <input type="text" name = "sateCol" id = "sateCol" class="form-control" placeholder="请输入演出厅的列数" required/><br>
-                演出厅状态: <input type="text" name="studioState" value="可用" id = "studioState" class="form-control" required/><br>
+                演出厅名称: <input type="text" name = "studioName" id="studioName" class="form-control" placeholder="请输入演出厅名称" onblur="check()" required/><br><span id = 'err'></span><br>
+                座位行数: <input type="text" name = "sateRow" id="sateRow" class="form-control" placeholder="请输入演出厅中座位的行数" onblur="check1()"required/><br><span id = 'err1'></span><br>
+                座位列数: <input type="text" name = "sateCol" id = "sateCol" class="form-control" placeholder="请输入演出厅的列数" onblur="check2()" required/><br><span id = 'err2'></span><br>
+                演出厅状态: <input type="text" name="studioState" value="可用" id = "studioState" class="form-control" onblur="check3()" required/><br><span id = 'err3'></span><br>
                 演出厅简介: <input type="text" name="studioIntroduction" id = "studioIntroduction" class="form-control" placeholder="请输入演出厅简介"/>
 
                 </form>
@@ -135,10 +135,10 @@
             </div>
             <div class="modal-body">
                 <form role="form" id = "change">
-                    演出厅名称: <input type="text" name = "studioName"  class="form-control" id = "changeName" required/><br>
-                    座位行数: <input type="text" name = "sateRow"  class="form-control" id = "changeRow" required/><br>
-                    座位列数: <input type="text" name = "sateCol"  class="form-control" id = "changeCol" required/><br>
-                    演出厅状态: <input type="text" name="studioState"   class="form-control" id = 'changeState' required/><br>
+                    演出厅名称: <input type="text" name = "studioName"  class="form-control" id = "changeName" onblur="check4()"required/><span id = 'err4'></span><br>
+                    座位行数: <input type="text" name = "sateRow"  class="form-control" id = "changeRow" onblur="check5()" required/><span id = 'err5'></span><br>
+                    座位列数: <input type="text" name = "sateCol"  class="form-control" id = "changeCol" onblur="check6()" required/><span id = 'err6'></span><br>
+                    演出厅状态: <input type="text" name="studioState"   class="form-control" id = 'changeState' onblur="check7()" required/><span id = 'err7'></span><br>
                     演出厅简介: <input type="text" name="studioIntroduction"  class="form-control" id = 'changeInt'/>
                 </form>
                 <div class="modal-footer">
@@ -149,5 +149,19 @@
         </div>
     </div>
 </div>
+
+<!--<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#error"></button>-->
+
+<div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="alert alert-warning">
+            <a href="#" class="close" data-dismiss="alert">
+                &times;
+            </a>
+            <strong>警告</strong><p id = 'waring'></p>
+        </div>
+    </div><!-- /.modal -->
+</div>
+
 </body>
 </html>
